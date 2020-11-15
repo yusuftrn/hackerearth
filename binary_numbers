@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void){
+    int n,count=0,max=0;
+    cin>>n;
+    while(n){
+        if(n&1)
+            count++;
+        else
+            count = 0;
+        if(max<count)
+            max = count;
+        n>>=1;
+    }
+    cout << max;
+}
+//https://www.hackerrank.com/challenges/30-binary-numbers/problem
